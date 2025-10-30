@@ -82,7 +82,7 @@ export const Creation = () => {
         <div className="form-group">
           <label className='label'>Initial buy</label>
           <div className="form-input input-split">
-            <button type="button" className="sol-btn">15 SOL</button>
+            <button type="button" className="sol-btn" style={{color:"white"}}>15 SOL</button>
             <span className="token-amount">414.13 tokens</span>
           </div>
           <small className="note">

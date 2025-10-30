@@ -175,9 +175,10 @@
 }
 
 .main-div{
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
+     padding: 53px 71px;
 }
 
 /* Tooltip Styles */
@@ -502,4 +503,72 @@ select {
   transition: border 0.2s;
   max-width: 100%;
   height: 160px;
+}
+/* Overlay background */
+.broadcast-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal box */
+.broadcast-box {
+  background: rgba(25, 25, 25, 0.95);
+  border-radius: 16px;
+  padding: 20px 28px;
+  width: 380px;
+  color: #fff;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Header (icon + text + close) */
+.broadcast-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left side — icon + text */
+.broadcast-box-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icon placeholder */
+.broadcast-icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* Title */
+.broadcast-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Close button */
+.broadcast-close {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.broadcast-close:hover {
+  color: #fff;
+}
+
+/* Description text */
+.broadcast-desc {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #ccc;
 }

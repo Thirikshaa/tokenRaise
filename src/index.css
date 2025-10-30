@@ -1,4 +1,319 @@
-body{
-  color: white;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
   background-color: #121314;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+  color-scheme: light dark;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* outline: none; */
+  /* width: 50px; */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.main-button {
+  height: 48px;
+  border-radius: 16px;
+  padding-top: 12px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  background-color: #00BBFF !important;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -1px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.main-button:hover {
+  background: linear-gradient(0deg, #00BBFF, #00BBFF),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)) !important;
+  color: #FFFFFF;
+}
+
+.secondary-button {
+  height: 48px;
+  gap: 10px;
+  border-radius: 16px;
+  padding-top: 12px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  background-color: #00BBFF;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -1px;
+  color: #ffffff;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0px;
+}
+
+.secondary-button:hover {
+  background: linear-gradient(0deg, #00BBFF, #008dc9),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)) !important;
+  color: #FFFFFF;
+}
+
+.logged-button {
+  height: 48px;
+  gap: 10px;
+  border-radius: 16px;
+  padding-top: 12px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  background: #FFFFFF29;
+  /* font-weight: 700; */
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  position: relative;
+  /* z-index: 99999999; */
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+
+}
+
+@media (max-width: 500px) {
+.logged-button {
+  height: 48px;
+  border-radius: 16px;
+  background: #FFFFFF29;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  min-width: auto;   /* remove fixed min width */
+  width: fit-content; /* content ku thotta varum */
+  padding: 5px; /* padding remove */
+}
+.dropdown-menu{
+  left: -2px;
+  width: 95%;
+}
+}
+
+.wkit-button {
+  content: "" !important;
+  width: 100% !important;
+  font-family: "Manrope", sans-serif !important;
+  height: 48px;
+  border-radius: 16px;
+  padding-top: 12px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  background-color: #00BBFF !important;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -1px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.connect-button-class button {
+  font-size: 14px !important;
+  color: white !important;
+}
+
+/* .connect-button-class button::after {
+  content: 'Connect Wallet' !important;
+} */
+
+.connect-button-class button span {
+  display: none !important;
+}
+
+.wkit-dialog__content {
+  border-radius: 16px !important;
+  background: #18191b1a !important;
+  backdrop-filter: blur(61px) !important;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px !important;
+  box-sizing: border-box !important;
+  overflow: hidden;
+  margin: 0px auto;
+  color: #FFFFFF !important;
+  z-index: 0 !important;
+}
+
+.wkit-dialog__content::before {
+  content: "";
+  position: absolute !important;
+  inset: 0 !important;
+  padding: 6px !important;
+  border-radius: 16px !important;
+  background: linear-gradient(180deg,
+      rgba(234, 234, 255, 0.06) 0%,
+      rgba(234, 234, 255, 0.0096) 100%) !important;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
+  -webkit-mask-composite: destination-out !important;
+  mask-composite: exclude !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.wkit-select__scroll::-webkit-scrollbar {
+  width: 0 !important;
+  /* scrollbar width */
+}
+
+.wkit-select__scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.wkit-select__scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.wkit-select__scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.wkit-dialog__title {
+  margin-top: 15px !important;
+  color: #FFFFFF !important;
+}
+
+.wkit-new-to-sui {
+  background: #18191b1a !important;
+  display: flex !important;
+  justify-content: center;
+}
+
+.wkit-select-item {
+  background: #FFFFFF0A !important;
+  color: #FFFFFF !important;
+}
+
+.wkit-select__title {
+  color: #FFFFFF !important;
+}
+
+.wkit-new-to-sui__text {
+  color: #FFFFFF !important;
+}
+
+.wkit-dialog__overlay {
+  background: #000000E0 !important;
+}
+
+.wkit-dialog__close {
+  color: #FFFFFF !important;
+  background: #FFFFFF0A !important;
+}
+
+.wkit-select__scroll {
+  overflow-y: none !important;
+  margin-right: -2px;
+  margin-left: -4px;
+  max-height: 380px;
+  min-height: 280px;
+  display: flex;
+  gap: 5px;
+  justify-content: column;
+  flex-direction: column;
+  width: 255px;
+}
+
+.wkit-connecting__description,
+.wkit-install__description,
+.wkit-connecting__title {
+  color: #FFFFFF !important;
+}
+
+.css-120dh41-MuiSvgIcon-root {
+  width: 0.8rem !important;
+}
+
+.swiper-initialized {
+  padding-top: 5px;
+}
+
+.epr-body{
+  scrollbar-width: none;
+}
+@media (max-width: 400px) {
+  .dropdown-menu{
+    width: 95%;
+  }
 }
